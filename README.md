@@ -40,7 +40,9 @@ I implemented a typical and basic Selection System. You can select soldier by dr
 ![](https://github.com/joquillan/CoordinatedMovementSystem/blob/main/Images/Selection.gif)
 
 
-###Controls
+
+
+### Controls
 
 * "WASD" to move the camera
 * Scroll to zoom in and out.
