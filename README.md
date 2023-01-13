@@ -1,8 +1,9 @@
 # Coordinated Movement System For AI
 
 
-Coordinated movement systems are a powerful tool for achieving a variety of tasks and goals. By enabling multiple autonomous agents or robots to move in a coordinated manner, these systems can be used to achieve objectives that would be difficult or impossible to accomplish using individual robots.
+Coordinated movement systems are a powerful tool for achieving a variety of tasks and goals. By enabling multiple autonomous agents or robots to move in a coordinated manner, these systems can be used to achieve objectives that would be difficult or impossible to accomplish using individual robots. Basically, it's a group that moves at the same speed, takes the same path, and arrives at the same time. 
  
+
 
 ## Goal and Result
 
@@ -24,12 +25,98 @@ The classes currently have no real difference except for color.
 - Sword: The typical knight, these will position between the rangers ans shields.
 - Shields: Meant to be defense type soldiers, these will always be at the front or the furthest away from the center.
 
+## RTS Selection, controls and Navigation
+
+
+### RTS Selection
+We are using a typical and basic Selection System. You can select soldier by draging, clicking and/or shift-ckicking. 
+
+
+//gif of showing it
+
+
+###Controls
+
+* "WASD" to move the camera
+* Scroll to zoom in and out.
+
+* "1 key": Normal Navigation, No Formation.
+* "2 key": Circle Formation.
+
+* "Q": Spawn One Soldier.
+* "E": Spawn Five Soldiers.
+
+* "5 key": Make The Selected soldier The King class.
+* "6 key": Make The Selected soldiers The Sword class.
+* "7 key": Make The Selected soldiers The Shield class.
+* "8 key": Make The Selected soldiers The Ranger class.
+ 
+
+### Navigation
+
+We are using unity's bild in navigation system. Unity's NavMeshAgent is a component that allows for autonomous movement of characters in a game or simulation using pathfinding and navigation. It provides an easy-to-use and efficient way to implement autonomous navigation, and can be integrated with other components/systems.
+
+
+
+
+//gif? of this?
+
+
+
+
+# Implementation
+
+Now that we have different classes and we have to base our soldiers psition according to the class, we need to know how many different classes we have selected and how many soldiers of each class. However, there are also challenges to using polar coordinates for circle formation. One of the main challenges is that it can be difficult to keep track of the robots' positions and movements, especially if the formation is large or complex. Luckily, the robots are already equipped with a navigation system to make this a little easier.
+
+
+### The Leader
+
+Selecting the leader of a coordinated group system can have a significant impact on the overall performance and effectiveness of the group. There are several different approaches that can be used to select a leader, including randomly selecting a soldier, using a virtual leader, or selecting the most important soldier, the king.
+
+
+* Randomly selecting a soldier as the leader can lead to a more decentralized system where each unit has an equal chance of leading the group.
+
+
+* Using a virtual leader can be useful in situations where there is not a king present. Virtual leaders can be programmed with specific skills or abilities that make them well suited to lead the group. This virtual leader can be placed anywhere in the formation without the player knowing where and it gives us more control over the formation.
+
+
+* Selecting the most important soldier,the king as the leader can be a more effective approach. This type is used more often in videogames, where one soldier will be chosen by the player. Using this has the advantage of making the formation protect the leader and base the formation solely around that leader. However, this approach can also lead to an overreliance on that single soldier, which can be problematic if the soldier becomes unavailable or doesn't exists.
+
+
+I decided on using the both the virtual one and most important one. In the circle formation, we will only be using the virtual target, since there won't always be a king in the selected soldiers. The king will always take the virtual leaders place, but in reality the formation is based on the virtual target. In the rectangular formation( which isn't finished) I planned on using the king if it was avaible, else I would make a virtual leader and make it take his place.
+
 
 ## Circle Formation
 
-One example of this, is the formation of a circle using polar coordinates. Polar coordinates are a way of specifying the position of a point in two-dimensional space. Rather than using Cartesian coordinates (x and y), polar coordinates specify the position of a point based on its distance from a central point (r) and the angle between that point and a reference direction (θ). This makes polar coordinates particularly well suited for circle formation, as they allow for easy adjustment of the circle's size and shape.
 
 
+// another foto of formation
+
+
+
+
+### Polar Coordinates
+
+One example of this system, is the formation of a circle using polar coordinates. Polar coordinates are a way of specifying the position of a point in two-dimensional space. Rather than using Cartesian coordinates (x and y), polar coordinates specify the position of a point based on its distance from a central point (radius) and the angle between that point and a reference direction (θ). This makes polar coordinates particularly well suited for circle formation, as they allow for easy adjustment of the circle's size and shape.
+
+To form a circle using polar coordinates, each robot is given a set of coordinates (radius and angle) that specify its distance and angle from the central point. These coordinates are then used to calculate the robot's position in Cartesian coordinates, which can be used to control its movement.
+
+One of the main advantages of using polar coordinates for circle formation is that it allows for easy adjustment of the circle's size and shape. By changing the distance and angle of the robots' coordinates, the circle can be made larger or smaller, (or even transformed into an ellipse, but not yet in this project). Additionally, because all robots are using the same coordinates system, it is easy for them to share their positions and movements with each other, helping to ensure that the formation remains coordinated and stable.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+In this GitHub repository, we provide an open-source implementation of a coordinated movement system for circle formation using polar coordinates. Our implementation includes a set of functions and classes for calculating and controlling the robots' positions and movements, as well as a sample application that demonstrates how to use the system. We hope that this implementation will be useful for anyone looking to develop their own coordinated movement systems, or for anyone interested in learning more about the use of polar coordinates for circle formation.
 
 
 
