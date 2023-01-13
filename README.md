@@ -11,8 +11,7 @@ The goal of this project is to create a coordinated movement system using AI. Th
  
  
  
- // foto
- 
+![](https://github.com/joquillan/CoordinatedMovementSystem/blob/main/Images/Circle%20Formation.gif)
  
 
 
