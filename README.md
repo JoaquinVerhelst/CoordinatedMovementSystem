@@ -37,7 +37,7 @@ The classes currently have no real difference except for color.
 I implemented a typical and basic Selection System. You can select soldier by draging, clicking and/or shift-ckicking. 
 
 
-//gif of showing it
+![](https://github.com/joquillan/CoordinatedMovementSystem/blob/main/Images/Selection.gif)
 
 
 ###Controls
@@ -60,11 +60,6 @@ I implemented a typical and basic Selection System. You can select soldier by dr
 ### Navigation
 
 I'm using unity's bild in navigation system. Unity's NavMeshAgent is a component that allows for autonomous movement of characters in a game or simulation using pathfinding and navigation. It provides an easy-to-use and efficient way to implement autonomous navigation, and can be integrated with other components/systems.
-
-
-
-//gif? of this?
-
 
 
 # Implementation
@@ -93,8 +88,7 @@ I decided on using the both the virtual one and most important one. In the circl
 
 
 
-// another foto of formation
-
+![](https://github.com/joquillan/CoordinatedMovementSystem/blob/main/Images/CirclePicure-0.png)
 
 
 
@@ -188,9 +182,11 @@ In this GitHub repository, I provide an open-source implementation of a coordina
 
 ## Sources
 
-https://www.gamedeveloper.com/programming/toward-more-realistic-pathfinding
 
+https://www.gamedeveloper.com/programming/coordinated-unit-movement
 
+https://www.gamedeveloper.com/programming/implementing-coordinated-movement
 
+https://mathworld.wolfram.com/PolarCoordinates.html
 
 
