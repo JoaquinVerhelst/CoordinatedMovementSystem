@@ -7,7 +7,7 @@ Coordinated movement systems are a powerful tool for achieving a variety of task
 
 ## Goal and Result
 
-The goal of this project is to create a coordinated movement system using AI. The system will be designed to control a group of agents, in this case we will be calling them soldiers, in a coordinated manner with the aim of achieving a common task or goal. The system will be based on the AI class and will be able to move the robots accordingly. The end goal of the project is to have the AI move in formations.
+The goal of this project is to create a coordinated movement system using AI. The system will be designed to control a group of agents, in this case we will be calling them soldiers, in a coordinated manner with the aim of achieving a common task or goal. The system will be based on the AI class type and will be able to move the soldiers accordingly. The end goal of the project is to have the AI move in formations.
  
  
  
