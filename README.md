@@ -7,28 +7,34 @@ Coordinated movement systems are a powerful tool for achieving a variety of task
 
 ## Goal and Result
 
-The goal of this project is to create a coordinated movement system using AI. The system will be designed to control a group of agents, in this case we will be calling them soldiers, in a coordinated manner with the aim of achieving a common task or goal. The system will be based on the AI class and will be able to move the robots accordingly depending on the given situation, this way the system can adapt and improve over time. The end goal of the project is to have a robust and efficient coordinated movement system that can be applied to a RTS type game.
+The goal of this project is to create a coordinated movement system using AI. The system will be designed to control a group of agents, in this case we will be calling them soldiers, in a coordinated manner with the aim of achieving a common task or goal. The system will be based on the AI class and will be able to move the robots accordingly. The end goal of the project is to have a robust and efficient coordinated movement system that can be applied to a RTS type game.
  
  
  
 ![](https://github.com/joquillan/CoordinatedMovementSystem/blob/main/Images/Circle%20Formation.gif)
  
 
+### Installation Guide
+
+1. Download Unity
+2. Download the code in ZIP
+3. Extract the ZIP and add the "Project" folder in Unity Hub
+
 
 ### Current Different Classes
 
 The classes currently have no real difference except for color.
 
-- King: The king will always be the center of the formations. It will always be surrounded or leading the soldiers. There can only be one king at the moment. 
-- Rangers: Their position will always be at the back or middle.
-- Sword: The typical knight, these will position between the rangers ans shields.
-- Shields: Meant to be defense type soldiers, these will always be at the front or the furthest away from the center.
+- King (Orange): The king will always be the center of the formations. It will always be surrounded or leading the soldiers. There can only be one king at the moment. 
+- Rangers (Green): Their position will always be at the back or middle.
+- Sword (Blue): The typical knight, these will position between the rangers ans shields.
+- Shields (gray): Meant to be defense type soldiers, these will always be at the front or the furthest away from the center.
 
 ## RTS Selection, controls and Navigation
 
 
 ### RTS Selection
-We are using a typical and basic Selection System. You can select soldier by draging, clicking and/or shift-ckicking. 
+I implemented a typical and basic Selection System. You can select soldier by draging, clicking and/or shift-ckicking. 
 
 
 //gif of showing it
@@ -53,13 +59,11 @@ We are using a typical and basic Selection System. You can select soldier by dra
 
 ### Navigation
 
-We are using unity's bild in navigation system. Unity's NavMeshAgent is a component that allows for autonomous movement of characters in a game or simulation using pathfinding and navigation. It provides an easy-to-use and efficient way to implement autonomous navigation, and can be integrated with other components/systems.
-
+I'm using unity's bild in navigation system. Unity's NavMeshAgent is a component that allows for autonomous movement of characters in a game or simulation using pathfinding and navigation. It provides an easy-to-use and efficient way to implement autonomous navigation, and can be integrated with other components/systems.
 
 
 
 //gif? of this?
-
 
 
 
@@ -138,7 +142,6 @@ We still have one problem, if we have many soldiers, they won't fit on a single 
 This function takes the current radius, a class and the amount of soldiers for that class
 
 
-
 ```
  
  int remainingSoldiers = currentSoldiers.Count;
@@ -178,17 +181,14 @@ This function takes the current radius, a class and the amount of soldiers for t
 ```
 
 
+# Conclusion
+
+In this GitHub repository, I provide an open-source implementation of a coordinated movement system for circle formation using polar coordinates. My implementation includes a set of functions and classes for calculating and controlling the robots' positions and movements, as well as a sample application that demonstrates how to use the system. We hope that this implementation will be useful for anyone looking to develop their own coordinated movement systems, or for anyone interested in learning more about the use of polar coordinates for circle formation.
 
 
+## Sources
 
-
-In this GitHub repository, we provide an open-source implementation of a coordinated movement system for circle formation using polar coordinates. Our implementation includes a set of functions and classes for calculating and controlling the robots' positions and movements, as well as a sample application that demonstrates how to use the system. We hope that this implementation will be useful for anyone looking to develop their own coordinated movement systems, or for anyone interested in learning more about the use of polar coordinates for circle formation.
-
-
-
-## Rectangular Formation
-
-
+https://www.gamedeveloper.com/programming/toward-more-realistic-pathfinding
 
 
 
