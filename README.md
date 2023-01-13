@@ -103,13 +103,80 @@ To form a circle using polar coordinates, each robot is given a set of coordinat
 
 One of the main advantages of using polar coordinates for circle formation is that it allows for easy adjustment of the circle's size and shape. By changing the distance and angle of the robots' coordinates, the circle can be made larger or smaller, (or even transformed into an ellipse, but not yet in this project). Additionally, because all robots are using the same coordinates system, it is easy for them to share their positions and movements with each other, helping to ensure that the formation remains coordinated and stable.
 
+### How The Circle Gets Formed
+
+
+```
+First we check how many classes in total of the selected soldiers and how many soldiers per class
+
+we add this to a KeyValuePair list. We add the class closest to the center first.
+
+List<KeyValuePair<Soldier.SoldierClass, int>> soldierClassInfo = new List<KeyValuePair<Soldier.SoldierClass, int>>();
+
+The total amount of classes is a start of total amount of circles.
+int totalCircles = The total of different classes
+
+spacing = 3;
+
+for ( int i = 0; i < totalCircles; i++)
+{
+    int addedCircles = CalculateCircle(radius, soldierClassInfo[i]);
+    if (addedCircles != 0)
+    {
+        radius += spacing * addedCircles;
+    }
+    radius += spacing;
+
+}
+
+```
+
+
+Right now we have a circle per class and the order of the classes is already good. The Calculate Circle Function's job is to calculate all that classes soldiers to the right position using polar coordinates. 
+
+We still have one problem, if we have many soldiers, they won't fit on a single circle. So the Calculate Circle Function will take that into account and will return an integer of the amount of added circles. 
+
+This function takes the current radius, a class and the amount of soldiers for that class
 
 
 
+```
+ 
+ int remainingSoldiers = currentSoldiers.Count;
+ soldierIndex = 0
+ do
+ {
+     maxAmountSoldiersOnCircle = The circles periphery / soldierwidth * spacingBetweenSoldiers
 
+     //if the amount of soldiers is bigger than it can fit on circle -> create new circle
+     
+     if (maxAmountSoldiersOnCircle > remainingSoldiers)
+     {
+         for  the remaining soldiers
+         {
+            currentSoldier[soldierIndex + i] = calculate the coordinates and set destination
+         }
+         remainingSoldiers = 0;
+     }
+     else
+     {
+         for the max amount of soldiers on that circle
+         {
+             currentSoldier[soldierIndex + i] = calculate the coordinates and set destination
+             ++soldierIndex;
+         }
+         
+         ++addedCircles;
+         radius += spacing;
 
+         remainingSoldiers -= maxAmountSoldiersOnCircle;
+     }
+ }
+ while remaining soldiers isnt 0
 
+ return addedCircles;
 
+```
 
 
 
@@ -117,6 +184,11 @@ One of the main advantages of using polar coordinates for circle formation is th
 
 
 In this GitHub repository, we provide an open-source implementation of a coordinated movement system for circle formation using polar coordinates. Our implementation includes a set of functions and classes for calculating and controlling the robots' positions and movements, as well as a sample application that demonstrates how to use the system. We hope that this implementation will be useful for anyone looking to develop their own coordinated movement systems, or for anyone interested in learning more about the use of polar coordinates for circle formation.
+
+
+
+## Rectangular Formation
+
 
 
 
